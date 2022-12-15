@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\VM\Desktop\GaLongPongPang\MAIN.ncd
+OUTFILE=C:\Users\VM\Desktop\GaLongPongPang\MAIN.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=C:\Users\VM\Desktop\GaLongPongPang
+LICENSE=WebPack
+USER_INFO=__0_0_0

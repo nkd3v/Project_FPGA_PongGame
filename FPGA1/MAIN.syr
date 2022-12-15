@@ -1,0 +1,1130 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: MAIN.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MAIN.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MAIN"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : MAIN
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" into library work
+Parsing entity <MAIN>.
+Parsing architecture <Behavioral> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MAIN> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 226. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 226. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 226. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 226. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 381: Net <player1_x[8]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 391: Net <player2_x[8]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 401: Net <ball_width[6]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MAIN>.
+    Related source file is "C:\Users\VM\Desktop\GaLongPongPang\main.vhd".
+WARNING:Xst:2935 - Signal 'player1_x', unconnected in block 'MAIN', is tied to its initial value (000001100).
+WARNING:Xst:2935 - Signal 'player1_width', unconnected in block 'MAIN', is tied to its initial value (0000100).
+WARNING:Xst:2935 - Signal 'player1_height', unconnected in block 'MAIN', is tied to its initial value (0110000).
+WARNING:Xst:2935 - Signal 'player2_x', unconnected in block 'MAIN', is tied to its initial value (111101101).
+WARNING:Xst:2935 - Signal 'player2_width', unconnected in block 'MAIN', is tied to its initial value (0000100).
+WARNING:Xst:2935 - Signal 'player2_height', unconnected in block 'MAIN', is tied to its initial value (0110000).
+WARNING:Xst:2935 - Signal 'ball_width', unconnected in block 'MAIN', is tied to its initial value (0000110).
+WARNING:Xst:2935 - Signal 'ball_height', unconnected in block 'MAIN', is tied to its initial value (0000110).
+    Found 1-bit register for signal <GREEN>.
+    Found 1-bit register for signal <BLUE>.
+    Found 20-bit register for signal <counter>.
+    Found 2-bit register for signal <CurrentState>.
+    Found 9-bit register for signal <ball_x>.
+    Found 9-bit register for signal <ball_y>.
+    Found 4-bit register for signal <ball_speedX>.
+    Found 4-bit register for signal <ball_speedY>.
+    Found 9-bit register for signal <player1_y>.
+    Found 9-bit register for signal <player2_y>.
+    Found 3-bit register for signal <p2Score>.
+    Found 3-bit register for signal <p1Score>.
+    Found 3-bit register for signal <P1_SCORE>.
+    Found 3-bit register for signal <P2_SCORE>.
+    Found 2-bit register for signal <winner>.
+    Found 1-bit register for signal <HSYNC>.
+    Found 1-bit register for signal <VSYNC>.
+    Found 10-bit register for signal <x>.
+    Found 10-bit register for signal <y>.
+    Found 1-bit register for signal <RED>.
+    Found finite state machine <FSM_0> for signal <CurrentState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 2                                              |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1192_OUT> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1194_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1200_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1206_OUT> created at line 193.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_1216_OUT> created at line 453.
+    Found 2-bit subtractor for signal <GND_5_o_GND_5_o_sub_1217_OUT> created at line 454.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1248_OUT> created at line 114.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1276_OUT> created at line 114.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1585_OUT> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1845_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2063_OUT> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2065_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2071_OUT> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2077_OUT> created at line 193.
+    Found 20-bit adder for signal <counter[19]_GND_5_o_add_0_OUT> created at line 416.
+    Found 14-bit adder for signal <n1786> created at line 148.
+    Found 14-bit adder for signal <n1789> created at line 148.
+    Found 14-bit adder for signal <n1792> created at line 148.
+    Found 14-bit adder for signal <n1795> created at line 148.
+    Found 14-bit adder for signal <n1798> created at line 148.
+    Found 14-bit adder for signal <n1801> created at line 148.
+    Found 14-bit adder for signal <n1804> created at line 148.
+    Found 14-bit adder for signal <n1807> created at line 148.
+    Found 14-bit adder for signal <n1810> created at line 148.
+    Found 14-bit adder for signal <n1813> created at line 148.
+    Found 14-bit adder for signal <n1816> created at line 148.
+    Found 14-bit adder for signal <n1819> created at line 148.
+    Found 14-bit adder for signal <n1822> created at line 148.
+    Found 14-bit adder for signal <n1825> created at line 148.
+    Found 14-bit adder for signal <n1828> created at line 148.
+    Found 14-bit adder for signal <n1831> created at line 148.
+    Found 14-bit adder for signal <n1834> created at line 148.
+    Found 14-bit adder for signal <n1837> created at line 148.
+    Found 14-bit adder for signal <n1840> created at line 148.
+    Found 14-bit adder for signal <n1843> created at line 148.
+    Found 14-bit adder for signal <n1846> created at line 148.
+    Found 14-bit adder for signal <n1849> created at line 148.
+    Found 14-bit adder for signal <n1852> created at line 148.
+    Found 14-bit adder for signal <n1855> created at line 148.
+    Found 14-bit adder for signal <n1858> created at line 148.
+    Found 14-bit adder for signal <n1861> created at line 148.
+    Found 14-bit adder for signal <n1864> created at line 148.
+    Found 14-bit adder for signal <n1867> created at line 148.
+    Found 14-bit adder for signal <n1870> created at line 148.
+    Found 14-bit adder for signal <n1873> created at line 148.
+    Found 14-bit adder for signal <n1876> created at line 148.
+    Found 14-bit adder for signal <n1879> created at line 148.
+    Found 14-bit adder for signal <n1882> created at line 148.
+    Found 14-bit adder for signal <n1885> created at line 148.
+    Found 14-bit adder for signal <n1888> created at line 148.
+    Found 14-bit adder for signal <n1891> created at line 148.
+    Found 14-bit adder for signal <n1894> created at line 148.
+    Found 10-bit adder for signal <n1471> created at line 456.
+    Found 10-bit adder for signal <n1476> created at line 458.
+    Found 10-bit adder for signal <n1935> created at line 95.
+    Found 10-bit adder for signal <n1938> created at line 96.
+    Found 10-bit adder for signal <n1941> created at line 96.
+    Found 10-bit adder for signal <n1487> created at line 111.
+    Found 10-bit adder for signal <n1492> created at line 116.
+    Found 10-bit adder for signal <n1965> created at line 95.
+    Found 10-bit adder for signal <n1968> created at line 96.
+    Found 10-bit adder for signal <n1971> created at line 96.
+    Found 10-bit adder for signal <n1505> created at line 111.
+    Found 10-bit adder for signal <n1510> created at line 116.
+    Found 10-bit adder for signal <n1517> created at line 464.
+    Found 10-bit adder for signal <n1518> created at line 465.
+    Found 3-bit adder for signal <p2Score[2]_GND_5_o_add_1303_OUT> created at line 472.
+    Found 3-bit adder for signal <p1Score[2]_GND_5_o_add_1306_OUT> created at line 474.
+    Found 14-bit adder for signal <n2005> created at line 148.
+    Found 14-bit adder for signal <n2008> created at line 148.
+    Found 14-bit adder for signal <n2196> created at line 148.
+    Found 14-bit adder for signal <n2199> created at line 148.
+    Found 14-bit adder for signal <n2202> created at line 148.
+    Found 14-bit adder for signal <n2205> created at line 148.
+    Found 14-bit adder for signal <n2208> created at line 148.
+    Found 14-bit adder for signal <n2211> created at line 148.
+    Found 14-bit adder for signal <n2214> created at line 148.
+    Found 14-bit adder for signal <n2217> created at line 148.
+    Found 14-bit adder for signal <n2220> created at line 148.
+    Found 10-bit adder for signal <x[9]_GND_5_o_add_2336_OUT> created at line 529.
+    Found 10-bit adder for signal <y[9]_GND_5_o_add_2338_OUT> created at line 531.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_3_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_15_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_27_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_39_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_51_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_63_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_75_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_87_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_99_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_111_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_123_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_135_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_147_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_159_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_171_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_183_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_196_OUT<9:0>> created at line 147.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_207_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_219_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_231_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_243_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_255_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_266_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_278_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_290_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_302_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_314_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_326_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_338_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_349_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_361_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_373_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_384_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_396_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_408_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_420_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_432_OUT<9:0>> created at line 146.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1193_OUT<10:0>> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1195_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1201_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1207_OUT<10:0>> created at line 193.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1399_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1400_OUT<9:0>> created at line 147.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_1534_OUT<9:0>> created at line 146.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1586_OUT<10:0>> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1846_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2064_OUT<10:0>> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2066_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2072_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2078_OUT<10:0>> created at line 193.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2190_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2191_OUT<9:0>> created at line 147.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2202_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2214_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2226_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2238_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2249_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2261_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2273_OUT<9:0>> created at line 146.
+    Found 10-bit subtractor for signal <GND_5_o_GND_5_o_sub_2285_OUT<9:0>> created at line 146.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1780_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2056_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2070_OUT<10:0>> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2038_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1876_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1912_OUT<10:0>> created at line 193.
+    Found 4-bit subtractor for signal <GND_5_o_ball_speedY[3]_sub_1214_OUT<3:0>> created at line 450.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1894_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2050_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1948_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2076_OUT<10:0>> created at line 192.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1708_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1702_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1990_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1978_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1654_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1672_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2002_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1612_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1966_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1684_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1936_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1600_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1594_OUT<10:0>> created at line 193.
+    Found 4-bit subtractor for signal <GND_5_o_ball_speedX[3]_sub_1244_OUT<3:0>> created at line 110.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2014_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1804_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1588_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1606_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1618_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1624_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1630_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1636_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1642_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1648_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1660_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1666_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1678_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1690_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1696_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1714_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1720_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1726_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1732_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1738_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1744_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1750_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1756_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1762_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1768_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1774_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1786_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1792_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1798_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1816_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1822_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1828_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1834_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1840_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1852_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1858_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1864_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1870_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1882_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1888_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1900_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1906_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1918_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1924_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1930_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1942_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1954_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1960_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1972_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1984_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_1996_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2008_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2020_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2026_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2032_OUT<10:0>> created at line 193.
+    Found 11-bit subtractor for signal <GND_5_o_GND_5_o_sub_2044_OUT<10:0>> created at line 193.
+    Found 4-bit subtractor for signal <GND_5_o_ball_speedY[3]_sub_1252_OUT<3:0>> created at line 115.
+    Found 4-bit subtractor for signal <GND_5_o_ball_speedX[3]_sub_1272_OUT<3:0>> created at line 110.
+    Found 4-bit subtractor for signal <GND_5_o_ball_speedY[3]_sub_1280_OUT<3:0>> created at line 115.
+    Found 10x3-bit multiplier for signal <GND_5_o_PWR_5_o_MuLt_5_OUT> created at line 148.
+    Found 10x3-bit multiplier for signal <GND_5_o_PWR_5_o_MuLt_197_OUT> created at line 148.
+    Found 10x3-bit multiplier for signal <GND_5_o_PWR_5_o_MuLt_1401_OUT> created at line 148.
+    Found 10x3-bit multiplier for signal <GND_5_o_PWR_5_o_MuLt_2192_OUT> created at line 148.
+    Found 1-bit 4-to-1 multiplexer for signal <CurrentState[1]_GND_5_o_Mux_2299_o> created at line 421.
+    Found 1-bit 4-to-1 multiplexer for signal <CurrentState[1]_GND_5_o_Mux_2300_o> created at line 421.
+    Found 1-bit 4-to-1 multiplexer for signal <CurrentState[1]_GND_5_o_Mux_2301_o> created at line 421.
+    Found 10-bit comparator lessequal for signal <n0005> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_10_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0008> created at line 149
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_12_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0002_GND_5_o_LessThan_13_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0018> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_22_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0003_GND_5_o_LessThan_25_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0029> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_34_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0004_GND_5_o_LessThan_37_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0040> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_46_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0005_GND_5_o_LessThan_49_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0051> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_58_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0006_GND_5_o_LessThan_61_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0062> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_70_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0007_GND_5_o_LessThan_73_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0073> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_82_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0008_GND_5_o_LessThan_85_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0084> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_94_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0009_GND_5_o_LessThan_97_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0095> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_106_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0010_GND_5_o_LessThan_109_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0106> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_118_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0011_GND_5_o_LessThan_121_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0117> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_130_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0012_GND_5_o_LessThan_133_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0128> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_142_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0013_GND_5_o_LessThan_145_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0139> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_154_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0014_GND_5_o_LessThan_157_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0150> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_166_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0015_GND_5_o_LessThan_169_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0161> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_178_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0016_GND_5_o_LessThan_181_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0172> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_190_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0017_GND_5_o_LessThan_193_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0184> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_202_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0187> created at line 149
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_204_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0018_GND_5_o_LessThan_205_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0198> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_214_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0019_GND_5_o_LessThan_217_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0209> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_226_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0020_GND_5_o_LessThan_229_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0220> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_238_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0021_GND_5_o_LessThan_241_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0231> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_250_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0022_GND_5_o_LessThan_253_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0242> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_262_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0023_GND_5_o_LessThan_265_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0253> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_273_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0024_GND_5_o_LessThan_276_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0264> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_285_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0025_GND_5_o_LessThan_288_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0275> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_297_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0026_GND_5_o_LessThan_300_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0286> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_309_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0027_GND_5_o_LessThan_312_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0297> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_321_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0028_GND_5_o_LessThan_324_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0308> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_333_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0029_GND_5_o_LessThan_336_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0319> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_345_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0030_GND_5_o_LessThan_348_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0330> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_356_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0031_GND_5_o_LessThan_359_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0341> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_368_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0032_GND_5_o_LessThan_371_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0352> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_380_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0033_GND_5_o_LessThan_383_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0363> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_391_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0034_GND_5_o_LessThan_394_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0374> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_403_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0035_GND_5_o_LessThan_406_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0385> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_415_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0036_GND_5_o_LessThan_418_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0396> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_PWR_5_o_LessThan_427_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0037_GND_5_o_LessThan_430_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0407> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0038_GND_5_o_LessThan_441_o> created at line 149
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1196_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1197_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1203_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1209_o> created at line 195
+    Found 9-bit comparator lessequal for signal <n0535> created at line 82
+    Found 11-bit comparator lessequal for signal <n0537> created at line 85
+    Found 9-bit comparator lessequal for signal <n0545> created at line 82
+    Found 11-bit comparator lessequal for signal <n0547> created at line 85
+    Found 10-bit comparator greater for signal <BUS_0063_GND_5_o_LessThan_1233_o> created at line 95
+    Found 10-bit comparator greater for signal <BUS_0064_GND_5_o_LessThan_1235_o> created at line 95
+    Found 10-bit comparator greater for signal <BUS_0065_GND_5_o_LessThan_1237_o> created at line 96
+    Found 10-bit comparator greater for signal <BUS_0066_GND_5_o_LessThan_1239_o> created at line 96
+    Found 10-bit comparator lessequal for signal <n0564> created at line 109
+    Found 10-bit comparator lessequal for signal <n0567> created at line 109
+    Found 10-bit comparator lessequal for signal <n0576> created at line 114
+    Found 10-bit comparator lessequal for signal <n0578> created at line 114
+    Found 10-bit comparator greater for signal <BUS_0071_GND_5_o_LessThan_1261_o> created at line 95
+    Found 10-bit comparator greater for signal <BUS_0072_GND_5_o_LessThan_1263_o> created at line 95
+    Found 10-bit comparator greater for signal <BUS_0073_GND_5_o_LessThan_1265_o> created at line 96
+    Found 10-bit comparator greater for signal <BUS_0074_GND_5_o_LessThan_1267_o> created at line 96
+    Found 10-bit comparator lessequal for signal <n0603> created at line 109
+    Found 10-bit comparator lessequal for signal <n0606> created at line 109
+    Found 10-bit comparator lessequal for signal <n0615> created at line 114
+    Found 10-bit comparator lessequal for signal <n0617> created at line 114
+    Found 9-bit comparator lessequal for signal <n0633> created at line 82
+    Found 10-bit comparator lessequal for signal <n0635> created at line 85
+    Found 9-bit comparator lessequal for signal <n0640> created at line 82
+    Found 10-bit comparator lessequal for signal <n0642> created at line 85
+    Found 10-bit comparator lessequal for signal <n0663> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_1406_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0666> created at line 149
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_1408_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0090_GND_5_o_LessThan_1409_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n0677> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_1541_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0101_GND_5_o_LessThan_1544_o> created at line 149
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1589_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1590_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1596_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1602_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1608_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1614_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1620_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1626_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1632_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1638_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1644_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1650_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1656_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1662_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1668_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1674_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1680_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1686_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1692_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1698_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1704_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1710_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1716_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1722_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1728_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1734_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1740_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1746_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1752_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1758_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1764_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1770_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1776_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1782_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1788_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1794_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1800_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1806_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1812_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1818_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1824_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1830_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1836_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1842_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1848_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1854_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1860_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1866_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1872_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1878_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1884_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1890_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1896_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1902_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1908_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1914_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1920_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1926_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1932_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1938_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1944_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1950_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1956_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1962_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1968_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1974_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1980_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1986_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1992_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_1998_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2004_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2010_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2016_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2022_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2028_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2034_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2040_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2046_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2052_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2058_o> created at line 195
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2059_o> created at line 161
+    Found 10-bit comparator lessequal for signal <n1087> created at line 164
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_2061_o> created at line 167
+    Found 10-bit comparator lessequal for signal <n1092> created at line 170
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2067_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2068_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2073_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2074_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2079_o> created at line 195
+    Found 11-bit comparator greater for signal <GND_5_o_GND_5_o_LessThan_2080_o> created at line 195
+    Found 10-bit comparator lessequal for signal <n1143> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2197_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1146> created at line 149
+    Found 10-bit comparator greater for signal <y[9]_GND_5_o_LessThan_2199_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0113_GND_5_o_LessThan_2200_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1156> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2209_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0114_GND_5_o_LessThan_2212_o> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2221_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0115_GND_5_o_LessThan_2224_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1178> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2233_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0116_GND_5_o_LessThan_2236_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1189> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2245_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0117_GND_5_o_LessThan_2248_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1200> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2256_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0118_GND_5_o_LessThan_2259_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1211> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2268_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0119_GND_5_o_LessThan_2271_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1222> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2280_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0120_GND_5_o_LessThan_2283_o> created at line 149
+    Found 10-bit comparator lessequal for signal <n1233> created at line 149
+    Found 10-bit comparator greater for signal <x[9]_GND_5_o_LessThan_2292_o> created at line 149
+    Found 14-bit comparator greater for signal <BUS_0121_GND_5_o_LessThan_2295_o> created at line 149
+    Found 10-bit comparator greater for signal <GND_5_o_x[9]_LessThan_2333_o> created at line 517
+    Found 10-bit comparator lessequal for signal <n1285> created at line 517
+    Found 10-bit comparator greater for signal <GND_5_o_y[9]_LessThan_2335_o> created at line 523
+    Found 10-bit comparator lessequal for signal <n1290> created at line 523
+    Summary:
+	inferred   4 Multiplier(s).
+	inferred 225 Adder/Subtractor(s).
+	inferred 103 D-type flip-flop(s).
+	inferred 272 Comparator(s).
+	inferred 255 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <MAIN> synthesized.
+
+Synthesizing Unit <div_10u_2u>.
+    Related source file is "".
+    Found 12-bit adder for signal <n0319> created at line 0.
+    Found 12-bit adder for signal <GND_6_o_b[1]_add_1_OUT> created at line 0.
+    Found 11-bit adder for signal <n0323> created at line 0.
+    Found 11-bit adder for signal <GND_6_o_b[1]_add_3_OUT> created at line 0.
+    Found 10-bit adder for signal <n0327> created at line 0.
+    Found 10-bit adder for signal <a[9]_b[1]_add_5_OUT> created at line 0.
+    Found 10-bit adder for signal <n0331> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_7_OUT> created at line 0.
+    Found 10-bit adder for signal <n0335> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_9_OUT> created at line 0.
+    Found 10-bit adder for signal <n0339> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0343> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_13_OUT> created at line 0.
+    Found 10-bit adder for signal <n0347> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_15_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <n0351> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_17_OUT[9:0]> created at line 0.
+    Found 10-bit adder for signal <n0355> created at line 0.
+    Found 10-bit adder for signal <a[9]_GND_6_o_add_19_OUT[9:0]> created at line 0.
+    Found 12-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0010> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0011> created at line 0
+    Summary:
+	inferred  20 Adder/Subtractor(s).
+	inferred  11 Comparator(s).
+	inferred  73 Multiplexer(s).
+Unit <div_10u_2u> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 10x3-bit multiplier                                   : 4
+# Adders/Subtractors                                   : 1265
+ 10-bit adder                                          : 848
+ 10-bit subtractor                                     : 52
+ 11-bit adder                                          : 104
+ 11-bit subtractor                                     : 99
+ 12-bit adder                                          : 104
+ 14-bit adder                                          : 48
+ 2-bit subtractor                                      : 2
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 4-bit subtractor                                      : 5
+# Registers                                            : 19
+ 1-bit register                                        : 5
+ 10-bit register                                       : 2
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 3-bit register                                        : 4
+ 4-bit register                                        : 2
+ 9-bit register                                        : 4
+# Comparators                                          : 844
+ 10-bit comparator greater                             : 63
+ 10-bit comparator lessequal                           : 533
+ 11-bit comparator greater                             : 90
+ 11-bit comparator lessequal                           : 54
+ 12-bit comparator lessequal                           : 52
+ 14-bit comparator greater                             : 48
+ 9-bit comparator lessequal                            : 4
+# Multiplexers                                         : 4051
+ 1-bit 2-to-1 multiplexer                              : 3859
+ 1-bit 4-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 158
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 7
+ 4-bit 2-to-1 multiplexer                              : 10
+ 9-bit 2-to-1 multiplexer                              : 12
+# FSMs                                                 : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <MAIN>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <x>: 1 register on signal <x>.
+The following registers are absorbed into counter <y>: 1 register on signal <y>.
+Unit <MAIN> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 10x3-bit multiplier                                   : 4
+# Adders/Subtractors                                   : 743
+ 10-bit adder                                          : 6
+ 10-bit adder carry in                                 : 520
+ 10-bit subtractor                                     : 52
+ 11-bit subtractor                                     : 99
+ 14-bit adder                                          : 48
+ 2-bit subtractor                                      : 2
+ 20-bit adder                                          : 1
+ 3-bit adder                                           : 2
+ 4-bit subtractor                                      : 5
+ 9-bit adder                                           : 8
+# Counters                                             : 3
+ 10-bit up counter                                     : 2
+ 20-bit up counter                                     : 1
+# Registers                                            : 63
+ Flip-Flops                                            : 63
+# Comparators                                          : 844
+ 10-bit comparator greater                             : 63
+ 10-bit comparator lessequal                           : 533
+ 11-bit comparator greater                             : 90
+ 11-bit comparator lessequal                           : 54
+ 12-bit comparator lessequal                           : 52
+ 14-bit comparator greater                             : 48
+ 9-bit comparator lessequal                            : 4
+# Multiplexers                                         : 4051
+ 1-bit 2-to-1 multiplexer                              : 3859
+ 1-bit 4-to-1 multiplexer                              : 3
+ 10-bit 2-to-1 multiplexer                             : 158
+ 2-bit 2-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 7
+ 4-bit 2-to-1 multiplexer                              : 10
+ 9-bit 2-to-1 multiplexer                              : 12
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <CurrentState[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ init  | 00
+ idle  | 01
+ play  | 11
+ win   | 10
+-------------------
+
+Optimizing unit <MAIN> ...
+WARNING:Xst:1293 - FF/Latch <ball_speedX_0> has a constant value of 1 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <div_10u_2u> ...
+WARNING:Xst:1293 - FF/Latch <ball_speedY_0> has a constant value of 1 in block <MAIN>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ball_speedX_1> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <ball_speedX_2> <ball_speedX_3> 
+INFO:Xst:2261 - The FF/Latch <ball_speedY_1> in Unit <MAIN> is equivalent to the following 2 FFs/Latches, which will be removed : <ball_speedY_2> <ball_speedY_3> 
+INFO:Xst:2261 - The FF/Latch <counter_0> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <x_0> 
+INFO:Xst:2261 - The FF/Latch <counter_1> in Unit <MAIN> is equivalent to the following FF/Latch, which will be removed : <x_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MAIN, actual ratio is 48.
+FlipFlop ball_y_0 has been replicated 1 time(s)
+FlipFlop ball_y_6 has been replicated 1 time(s)
+FlipFlop ball_y_7 has been replicated 1 time(s)
+FlipFlop y_2 has been replicated 1 time(s)
+FlipFlop y_3 has been replicated 1 time(s)
+FlipFlop y_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 103
+ Flip-Flops                                            : 103
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MAIN.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3857
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 137
+#      LUT2                        : 232
+#      LUT3                        : 278
+#      LUT4                        : 273
+#      LUT5                        : 403
+#      LUT6                        : 1049
+#      MUXCY                       : 797
+#      MUXF7                       : 19
+#      VCC                         : 1
+#      XORCY                       : 660
+# FlipFlops/Latches                : 103
+#      FD                          : 2
+#      FDE                         : 55
+#      FDR                         : 33
+#      FDRE                        : 13
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 6
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             103  out of  11440     0%  
+ Number of Slice LUTs:                 2379  out of   5720    41%  
+    Number used as Logic:              2379  out of   5720    41%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2421
+   Number with an unused Flip Flop:    2318  out of   2421    95%  
+   Number with an unused LUT:            42  out of   2421     1%  
+   Number of fully used LUT-FF pairs:    61  out of   2421     2%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    102    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLOCK                              | BUFGP                  | 103   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 20.432ns (Maximum Frequency: 48.944MHz)
+   Minimum input arrival time before clock: 21.613ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 20.432ns (frequency: 48.944MHz)
+  Total number of paths / destination ports: 138196875634 / 215
+-------------------------------------------------------------------------
+Delay:               20.432ns (Levels of Logic = 35)
+  Source:            player1_y_0 (FF)
+  Destination:       GREEN (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: player1_y_0 to GREEN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.651  player1_y_0 (player1_y_0)
+     LUT3:I2->O            1   0.205   0.000  Madd_n1471_Madd_lut<0> (Madd_n1471_Madd_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1471_Madd_cy<0> (Madd_n1471_Madd_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<1> (Madd_n1471_Madd_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<2> (Madd_n1471_Madd_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<3> (Madd_n1471_Madd_cy<3>)
+     XORCY:CI->O          20   0.180   1.197  Madd_n1471_Madd_xor<4> (n1471<4>)
+     LUT5:I3->O            1   0.203   0.684  Mmux_n14751_SW0 (N248)
+     LUT6:I4->O           11   0.203   1.111  Mmux_n14751 (n1475<0>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_lut<0> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<0> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<1> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<2> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<3> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<3>)
+     MUXCY:CI->O          34   0.213   1.568  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<4> (GND_5_o_GND_5_o_LessThan_1249_o)
+     LUT6:I2->O            2   0.203   0.721  Madd_n1971_xor<7>11 (Madd_n1971_xor<7>1)
+     LUT6:I4->O            1   0.203   0.684  Madd_n1971_xor<7>12_SW2 (N219)
+     LUT6:I4->O            2   0.203   0.864  Madd_n1971_xor<7>13 (n1971<7>)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_lutdi3 (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_lutdi3)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<3> (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<3>)
+     MUXCY:CI->O          30   0.019   1.264  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<4> (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<4>)
+     LUT6:I5->O            8   0.205   0.803  Mmux_ball_speedX[3]_ball_speedX[3]_mux_1285_OUT21 (Mmux_ball_speedX[3]_ball_speedX[3]_mux_1285_OUT21)
+     LUT6:I5->O            1   0.205   0.000  Madd_n1517_Madd_lut<1> (Madd_n1517_Madd_lut<1>)
+     XORCY:LI->O          21   0.136   1.114  Madd_n1517_Madd_xor<1> (n1517<1>)
+     LUT2:I1->O            1   0.205   0.580  Mmux_GND_5_o_GND_5_o_mux_1312_OUT9111_SW0 (N545)
+     LUT6:I5->O            5   0.205   0.715  Mmux_GND_5_o_GND_5_o_mux_1313_OUT41_SW1 (N499)
+     LUT6:I5->O            3   0.205   0.755  Mmux_GND_5_o_GND_5_o_mux_1313_OUT2 (GND_5_o_GND_5_o_mux_1313_OUT<1>)
+     LUT2:I0->O            1   0.203   0.580  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>1 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>1)
+     LUT3:I2->O            1   0.205   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_lut<0>2 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_lut<0>2)
+     MUXCY:S->O            1   0.172   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_1 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>2)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_2 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>3)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_3 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>4)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_4 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>5)
+     XORCY:CI->O           1   0.180   0.684  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_xor<0>_5 (GND_5_o_GND_5_o_sub_2066_OUT<6>)
+     LUT6:I4->O            3   0.203   0.879  GND_5_o_GND_5_o_AND_586_o5_SW0_SW0_SW0_SW0 (N567)
+     LUT6:I3->O            1   0.205   0.000  Mmux_CurrentState[1]_GND_5_o_Mux_2299_o15 (CurrentState[1]_GND_5_o_Mux_2299_o)
+     FDR:D                     0.102          RED
+    ----------------------------------------
+    Total                     20.432ns (5.578ns logic, 14.854ns route)
+                                       (27.3% logic, 72.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 142737823576 / 64
+-------------------------------------------------------------------------
+Offset:              21.613ns (Levels of Logic = 36)
+  Source:            P1_DOWN (PAD)
+  Destination:       GREEN (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: P1_DOWN to GREEN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.058  P1_DOWN_IBUF (P1_DOWN_IBUF)
+     LUT3:I0->O            1   0.205   0.000  Madd_n1471_Madd_lut<0> (Madd_n1471_Madd_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_n1471_Madd_cy<0> (Madd_n1471_Madd_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<1> (Madd_n1471_Madd_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<2> (Madd_n1471_Madd_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_n1471_Madd_cy<3> (Madd_n1471_Madd_cy<3>)
+     XORCY:CI->O          20   0.180   1.197  Madd_n1471_Madd_xor<4> (n1471<4>)
+     LUT5:I3->O            1   0.203   0.684  Mmux_n14751_SW0 (N248)
+     LUT6:I4->O           11   0.203   1.111  Mmux_n14751 (n1475<0>)
+     LUT4:I1->O            1   0.205   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_lut<0> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<0> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<1> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<2> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<3> (Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<3>)
+     MUXCY:CI->O          34   0.213   1.568  Mcompar_GND_5_o_GND_5_o_LessThan_1249_o_cy<4> (GND_5_o_GND_5_o_LessThan_1249_o)
+     LUT6:I2->O            2   0.203   0.721  Madd_n1971_xor<7>11 (Madd_n1971_xor<7>1)
+     LUT6:I4->O            1   0.203   0.684  Madd_n1971_xor<7>12_SW2 (N219)
+     LUT6:I4->O            2   0.203   0.864  Madd_n1971_xor<7>13 (n1971<7>)
+     LUT4:I0->O            0   0.203   0.000  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_lutdi3 (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_lutdi3)
+     MUXCY:DI->O           1   0.145   0.000  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<3> (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<3>)
+     MUXCY:CI->O          30   0.019   1.264  Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<4> (Mcompar_BUS_0074_GND_5_o_LessThan_1267_o_cy<4>)
+     LUT6:I5->O            8   0.205   0.803  Mmux_ball_speedX[3]_ball_speedX[3]_mux_1285_OUT21 (Mmux_ball_speedX[3]_ball_speedX[3]_mux_1285_OUT21)
+     LUT6:I5->O            1   0.205   0.000  Madd_n1517_Madd_lut<1> (Madd_n1517_Madd_lut<1>)
+     XORCY:LI->O          21   0.136   1.114  Madd_n1517_Madd_xor<1> (n1517<1>)
+     LUT2:I1->O            1   0.205   0.580  Mmux_GND_5_o_GND_5_o_mux_1312_OUT9111_SW0 (N545)
+     LUT6:I5->O            5   0.205   0.715  Mmux_GND_5_o_GND_5_o_mux_1313_OUT41_SW1 (N499)
+     LUT6:I5->O            3   0.205   0.755  Mmux_GND_5_o_GND_5_o_mux_1313_OUT2 (GND_5_o_GND_5_o_mux_1313_OUT<1>)
+     LUT2:I0->O            1   0.203   0.580  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>1 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>1)
+     LUT3:I2->O            1   0.205   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_lut<0>2 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_lut<0>2)
+     MUXCY:S->O            1   0.172   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_1 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>2)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_2 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>3)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_3 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>4)
+     MUXCY:CI->O           1   0.019   0.000  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>_4 (Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_cy<0>5)
+     XORCY:CI->O           1   0.180   0.684  Msub_GND_5_o_GND_5_o_sub_2066_OUT<10:0>_xor<0>_5 (GND_5_o_GND_5_o_sub_2066_OUT<6>)
+     LUT6:I4->O            3   0.203   0.879  GND_5_o_GND_5_o_AND_586_o5_SW0_SW0_SW0_SW0 (N567)
+     LUT6:I3->O            1   0.205   0.000  Mmux_CurrentState[1]_GND_5_o_Mux_2299_o15 (CurrentState[1]_GND_5_o_Mux_2299_o)
+     FDR:D                     0.102          RED
+    ----------------------------------------
+    Total                     21.613ns (6.353ns logic, 15.260ns route)
+                                       (29.4% logic, 70.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            P1_SCORE_2 (FF)
+  Destination:       P1_SCORE<2> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: P1_SCORE_2 to P1_SCORE<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  P1_SCORE_2 (P1_SCORE_2)
+     OBUF:I->O                 2.571          P1_SCORE_2_OBUF (P1_SCORE<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |   20.432|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 29.14 secs
+ 
+--> 
+
+Total memory usage is 4539052 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

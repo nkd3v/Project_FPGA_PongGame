@@ -1,0 +1,53 @@
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 
+xst -intstyle ise -ifn "C:/xilinx_workspace/segment/segment.xst" -ofn "C:/xilinx_workspace/segment/segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc segment.ucf -p xc6slx9-tqg144-3 segment.ngc segment.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o segment_map.ncd segment.ngd segment.pcf 
+par -w -intstyle ise -ol high -mt off segment_map.ncd segment.ncd segment.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml segment.twx segment.ncd -o segment.twr segment.pcf -ucf segment.ucf 
+bitgen -intstyle ise -f segment.ut segment.ncd 

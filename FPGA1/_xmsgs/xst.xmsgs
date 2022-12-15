@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 381: Net &lt;<arg fmt="%s" index="1">player1_x[8]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 391: Net &lt;<arg fmt="%s" index="1">player2_x[8]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\VM\Desktop\GaLongPongPang\main.vhd" Line 401: Net &lt;<arg fmt="%s" index="1">ball_width[6]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player1_x</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000001100</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player1_width</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000100</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player1_height</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0110000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player2_x</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">111101101</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player2_width</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000100</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">player2_height</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0110000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ball_width</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000110</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="new" >Signal &apos;<arg fmt="%s" index="1">ball_height</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">MAIN</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000110</arg>).
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ball_speedX_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">MAIN</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ball_speedY_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">MAIN</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ball_speedX_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MAIN</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ball_speedX_2&gt; &lt;ball_speedX_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ball_speedY_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MAIN</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ball_speedY_2&gt; &lt;ball_speedY_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">counter_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MAIN</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;x_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">counter_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">MAIN</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;x_1&gt; </arg>
+</msg>
+
+</messages>
